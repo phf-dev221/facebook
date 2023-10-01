@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulaire Date de Naissance</title>
+</head>
+<body>
+    <form>
+        <label for="jour">Jour:</label>
+        <select id="jour" name="jour">
+            <!-- Options pour les jours (comme précédemment) -->
+        </select>
+
+        <label for="mois">Mois:</label>
+        <select id="mois" name="mois">
+            <!-- Options pour les mois (comme précédemment) -->
+        </select>
+
+        <label for="année">Année:</label>
+        <input type="text" id="année" name="année">
+        <button type="button" id="année-dropdown">Sélectionner une année</button>
+
+        <div id="année-liste" style="display: none;">
+            <!-- Liste déroulante des années (générée en JavaScript) -->
+        </div>
+
+        <input type="submit" value="Soumettre">
+    </form>
+
+    <script>
+        const annéeInput = document.getElementById('année');
+        const annéeDropdownButton = document.getElementById('année-dropdown');
+        const annéeListe = document.getElementById('année-liste');
+
+        // Créer une liste déroulante des années
+        function créerListeAnnées() {
+            const annéeActuelle = new Date().getFullYear();
+            annéeListe.innerHTML = '';
+
+            for (let année = annéeActuelle; année >= 1900; année--) {
+                const option = document.createElement('div');
+                option.textContent = année;
+                option.addEventListener('click', () => {
+                    annéeInput.value = année;
+                    annéeListe.style.display = 'none';
+                });
+                annéeListe.appendChild(option);
+            }
+        }
+
+        // Afficher/masquer la liste déroulante des années
+        annéeDropdownButton.addEventListener('click', () => {
+            if (annéeListe.style.display === 'none' || annéeListe.style.display === '') {
+                annéeListe.style.display = 'block';
+                créerListeAnnées();
+            } else {
+                annéeListe.style.display = 'none';
+            }
+        });
+
+        // Mettre à jour la liste des années lorsque l'année est modifiée dans le champ de texte
+        annéeInput.addEventListener('input', créerListeAnnées);
+    </script>
+</body>
+</html>

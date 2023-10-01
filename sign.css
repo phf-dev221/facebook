@@ -1,0 +1,108 @@
+body{
+    width: 35%;
+    text-align: center;
+    border: 1px solid transparent;
+    margin-left: 30%;
+    margin-top: 5%;
+    padding-bottom: 2%;
+    box-shadow: 1px 1px 1px 1px gray;
+    
+}
+
+.section1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.part_left{
+    margin-left: 4%;
+}
+
+.part_left p{
+    margin-top: -18px;
+}
+.part_right{
+    margin-top: 4%;
+    font-weight: bold;
+    margin-right: 3%;
+}
+
+.prenom, .nom{
+    width: 45%;
+    margin-left: 2px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 2%;
+    background-color: #f0f0f2;
+}
+
+.phone, .mp{
+    width: 92.3%;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 1px;
+    margin-top: 2%;
+    background-color: #f0f0f2;
+}
+
+h5{
+    margin-left: -72%;
+}
+
+h6{
+    margin-left: -83%;
+    font-size: 14px;
+}
+
+select{
+    width: 30.7%;
+    border-radius: 5px;
+    height: 30px;
+    
+}
+
+.all_label{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding-left: 4.1%;
+    margin-top: -2%;
+    
+}
+label{
+    border: 1px solid gray;
+    padding: 7px 14px 7px 14px;
+    border-radius: 5px;
+}
+
+.quoi{
+    width: 1.5%;
+    height: 1.5%;
+    border: 1px solid transparent;
+    color: white;
+    background-color:gray;
+    border-radius: 50%;
+}
+
+.text{
+    text-align: left;
+    font-size: 13px;
+    color:gray;
+    margin-top: 4%;
+    padding-left: 20px;
+}
+
+.text a{
+    text-decoration: none;
+}
+
+.send{
+    padding: 0 32px 0 32px;
+    background-color: #4fc031;
+    height: 20px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    
+}
